@@ -1,0 +1,132 @@
+@use 'header';
+@use 'variaveis';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+    list-style: none;
+}
+
+header {
+    padding-bottom: 8vh;
+}
+
+.space {
+    padding-left: 2vh;
+}
+
+body {
+    background-color: variaveis.$corPrimaria;
+    color: variaveis.$color;
+}
+
+.info {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: variaveis.$corDeFundoSecundaria;
+    padding: 1vh;
+
+    @media (max-width: 768px) {
+        padding: 2vh 1vh;
+        
+    }
+
+    &__content {
+
+        display: grid;
+        @media (max-width: 768px) {
+
+            h2 {
+                padding: 1.5vh 0 ;
+                text-align: center;
+                padding-right: 3.5vh;
+            }
+        }
+    }
+}
+
+.btn {
+    padding-top: 2vh;
+    text-transform: uppercase;
+
+    &--oferta {
+        color: #808080;
+        display: flex;
+        padding-top: 0.5vh;
+    }
+
+    &__button{
+        background-color: variaveis.$botaoPrimario;
+        color: variaveis.$color;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+        text-decoration: none;
+        letter-spacing: 1px;
+        border: 1px solid #004fa3;
+
+        @media (max-width: 768px) {
+
+        }
+
+
+                &:hover {
+                    background-color: #0056b3;
+                    transform: scale(1.05);
+                }
+            }
+    
+}
+
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    padding: 1vh;
+    margin: 0 auto;
+    display: flex;
+    background-color: variaveis.$corDeFundoSecundaria;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+
+    &__content {
+        img {
+            width: 360px;
+            height: 500px;
+        }
+
+        &__information {
+            width: 100%;
+            padding: 0 8vh 0;
+
+            h2 {
+            text-align: center;
+            padding-bottom: 6vh;
+            padding-top: 1.5vh;
+        }
+
+            &--bold {
+                font-weight: bold;
+
+                
+            }
+
+            &--list {
+                padding-bottom: 1.5vh;
+            }
+        }
+    }
+}
+
+
+
+
+
